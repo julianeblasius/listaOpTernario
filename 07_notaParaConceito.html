@@ -10,11 +10,15 @@
     // Entre 5.9 e zero            E
 
     //Entrada
+    const nota = parseInt(prompt('Informe a sua nota').replace(',','.'));
 
 
     //Processamento
+    let mensagemfinal = (nota <= 5.9) ? "Seu conceito é E" : (nota <= 6.9 )? "Seu conceito é D" 
+    : (nota <= 7.9) ? "Seu conceito é C" : (nota <= 8.9) ? "Seu conceito é B" : "Seu conceito é A";
 
     
     //Saída
+    alert(`${mensagemfinal}`)
 
 </script>

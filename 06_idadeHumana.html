@@ -8,11 +8,20 @@
     // - cães grandes: fator 7.
 
     //Entrada
+    const idade = parseInt(prompt('Informe a idade do seu cão'))
+    const porte = prompt('Informe o porte do seu cão (p, m ou g)').toUpperCase();
+    const portep = (idade * 5)
+    const portem = (idade * 6)
+    const porteg = (idade * 7);
 
 
     //Processamento
+    let mensagemfinal = (porte == "P") ? `A idade do seu cão é igual ${portep} anos` 
+    : (porte == "M") ? `A idade do seu cão é igual a ${portem} anos`
+    : `A idade do seu cão é igual a ${porteg} anos`
 
     
     //Saída
+    document.write(`${mensagemfinal}`)
 
 </script>

@@ -8,11 +8,21 @@
         //- acima de 1500: aumento de 5 %
     
     //Entrada
+    const preco = parseInt(prompt('Informe o preço do produto').replace(',','.'))
+    precovinte = (preco * 1.2)
+    precoquinze = (preco * 1.15)
+    precodez = (preco * 1.1)
+    precocinco = (preco * 1.05);
 
 
     //Processamento
+    let mensagemfinal = (preco <= 280) ?  `O preço é igual a R$ ${precovinte.toFixed(2).replace('.',',')}`
+    : (preco <= 700) ? `O preço é igual a R$ ${precoquinze.toFixed(2).replace('.',',')}` 
+    : (preco <= 1500) ? `O preço é igual a R$ ${precodez.toFixed(2).replace('.',',')}`
+    : `O preço é igual a R$ ${precocinco.toFixed(2).replace('.',',')}`
 
     
     //Saída
+    document.write(`${mensagemfinal}`)
 
 </script>

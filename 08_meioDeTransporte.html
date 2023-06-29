@@ -6,12 +6,20 @@
     // Verifique qual é o meio de transporte mais barato e apresente em tela, especificando quanto custará para ir e voltar do trabalho diariamente.
 
     //Entrada
+    let preco = Number(prompt('Informe o preço do litro do combustível').replace(',','.'))
+    const quantidade = Number(prompt('Informe a quantidade de litros utilizados para se deslocar para o trabalho diariamente').replace(',','.'))
+    preco = preco * quantidade
+    const tp = Number(prompt('Informe o preço do transporte público para se deslocar ao trabalho diariamente').replace(',','.'))
 
 
     //Processamento
+    let mensagemfinal = (preco > tp) ? `O meio de transporte mais barato é transporte público que custa R$ ${tp.toFixed(2).replace('.',',')}` 
+    : (preco = tp) ? " O preço de ambos é igual"
+    : `O meio de transporte mais barato é o veículo particular e custa R$ ${preco.toFixed(2).replace('.',',')}`
 
     
     //Saída
+    document.write(`${mensagemfinal}`)
 
     
 </script>
